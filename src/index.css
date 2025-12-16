@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  /*Theme 1  */
+  /* BACKGROUNDS */
+  --color-main-bg: oklch(32% 0.05 270); 
+  --color-keypad-bg: oklch(21% 0.04 275); 
+  --color-screen-bg: oklch(15% 0.04 280); 
+
+  /* KEYS - RESET/DEL */
+  --color-key-del-bg: oklch(60.347% 0.07043 264.252); 
+  --color-key-del-bg-hover: oklch(68.175% 0.05731 264.104); 
+  --color-key-eq-bg-hover: oklch(61.117% 0.16173 25.276);
+  --color-hover-bg: oklch(92.3% 0.003 48.717);
+  --color-key-del-shadow: oklch(38% 0.05 268); 
+
+  /* KEYS - EQUALS/TOGGLE */
+  --color-key-eq-bg: oklch(55.111% 0.16156 26.132); 
+  --color-key-eq-bg-hover: oklch(61.771% 0.1445 24.224); 
+  --color-key-eq-shadow: oklch(39% 0.15 25); 
+
+  /* KEYS - NUMERICOS */
+  --color-key-num-bg: oklch(86.9% 0.005 56.366);
+  --color-key-num-shadow: oklch(66% 0.04 75);
+
+  /* TEXT */
+  --color-text-dark: oklch(33% 0.03 270); 
+  --color-text-light: oklch(100% 0.0 0); 
+  --color-text-light-number:  oklch(100% 0.0 0);
+  --color-bg-pointer:oklch(75% 0.183 55.934);
+  --color-text-eq: var(--color-text-light); 
+
+
+  /* Theme 2 */
+
+  --color-main-bg2: oklch(90% 0.0 0); 
+  --color-keypad-bg2: oklch(82% 0.005 0); 
+  --color-screen-bg2: oklch(93% 0.0 0); 
+
+ 
+  --color-key-del-bg2: oklch(41% 0.06 220); 
+  --color-hover-bg2: oklch(92.3% 0.003 48.717);
+  --color-key-del-bg-hover2:oklch(56.788% 0.07699 216.54);
+  --color-key-eq-bg-hover2: oklch(56.636% 0.14248 50.267);
+  --color-key-del-shadow2: oklch(29% 0.08 220); 
+
+
+  --color-key-eq-bg2: oklch(49% 0.18 70); 
+  --color-key-eq-shadow2: oklch(33% 0.17 70); 
+
+  --color-key-num-bg2: oklch(90.06% 0.0001 271.152); 
+  --color-key-num-shadow2: oklch(63% 0.02 85); 
+
+  
+  --color-text-dark2: oklch(20% 0.015 100); 
+  --color-text-light2: oklch(100% 0.0 0); 
+  --color-text-light-number2:  oklch(20% 0.015 100);
+  --color-bg-pointer2:oklch(75% 0.183 55.934);
+  --color-text-eq2: var(--color-text-light); 
+
+  
+  /* Theme 3 */
+ 
+  --color-main-bg3: oklch(16.897% 0.0587 301.241); 
+  --color-keypad-bg3: oklch(15.313% 0.07075 313.792); 
+  --color-screen-bg3: oklch(13% 0.04 315); 
+
+
+  --color-key-del-bg3: oklch(33% 0.11 320); 
+  --color-hover-bg3: oklch(29.1% 0.149 302.717) ;
+  --color-key-del-bg-hover3: oklch(43.8% 0.218 303.724);
+  --color-key-eq-bg-hover3: oklch(43.8% 0.218 303.724);
+  --color-key-del-shadow3: oklch(60% 0.18 330); 
+
+  
+  --color-key-eq-bg3: oklch(74% 0.18 180); 
+  --color-key-eq-bg-hover3: oklch(82.344% 0.14886 177.937); 
+  --color-key-eq-shadow3: oklch(82% 0.10 190); 
+
+ 
+  --color-key-num-bg3: oklch(24% 0.07 310); 
+  --color-key-num-shadow3: oklch(41% 0.12 340); 
+
+
+  --color-text-dark3:  oklch(90.5% 0.182 98.111);
+  --color-text-light3: oklch(100% 0.0 0); 
+  --color-text-light-number3:oklch(90.5% 0.182 98.111);
+  --color-bg-pointer3:oklch(85.5% 0.138 181.071);
+  --color-text-eq3: oklch(0% 0 0); 
+}
+
+
+
+
+
+
+
+
+@theme{
+
+  --color-main-bg: var(--color-main-bg);
+  --color-keypad-bg: var(--color-keypad-bg);
+  --color-screen-bg: var(--color-screen-bg);
+
+  --color-key-del-bg: var(--color-key-del-bg);
+  --color-hover-bg: var(--color-hover-bg);
+  --color-key-eq-bg-hover: var( --color-key-eq-bg-hover);
+  --color-key-del-shadow: var(--color-key-del-shadow);
+  --color-key-del-bg-hover: var(--color-key-del-bg-hover);
+
+  --color-key-eq-bg: var(--color-key-eq-bg);
+  --color-key-eq-shadow: var(--color-key-eq-shadow);
+
+  --color-key-num-bg: var(--color-key-num-bg);
+  --color-key-num-shadow: var(--color-key-num-shadow);
+
+  --color-text-dark: var(--color-text-dark);
+  --color-text-light: var(--color-text-light);
+  --color-text-eq: var(--color-text-eq);
+  --color-bg-pointer: var(--color-bg-pointer);
+  --color-text-light-number: var(--color-text-light-number);
+
+}
+
+@custom-variant theme2 (&:is(.theme2 *));
+
+
+.theme2 {
+
+  --color-main-bg: var(--color-main-bg2); 
+  --color-keypad-bg: var(--color-keypad-bg2); 
+  --color-screen-bg: var(--color-screen-bg2); 
+
+  --color-key-del-bg: var(--color-key-del-bg2); 
+  --color-hover-bg: var(--color-hover-bg2);
+  --color-key-eq-bg-hover: var(--color-key-eq-bg-hover2);
+  --color-key-del-shadow: var(--color-key-del-shadow2);
+  --color-key-del-bg-hover: var(--color-key-del-bg-hover2); 
+  
+  --color-key-eq-bg: var(--color-key-eq-bg2);
+  --color-key-eq-shadow: var(--color-key-eq-shadow2); 
+  
+  --color-key-num-bg: var(--color-key-num-bg2);
+  --color-key-num-shadow: var(--color-key-num-shadow2);
+
+  --color-text-dark: var(--color-text-dark2);
+  --color-text-light: var(--color-text-light2);
+  --color-text-light-number: var( --color-text-light-number2);
+  --color-bg-pointer: var(--color-bg-pointer2);
+  --color-text-eq: var(--color-text-eq2);
+}
+
+@custom-variant theme3 (&:is(.theme3 *));
+
+.theme3 {
+ --color-main-bg: var(--color-main-bg3);
+  --color-keypad-bg: var(--color-keypad-bg3); 
+  --color-screen-bg: var(--color-screen-bg3);
+
+  --color-key-del-bg: var(--color-key-del-bg3); 
+  --color-hover-bg: var(--color-hover-bg3);
+  --color-key-eq-bg-hover: var(--color-key-eq-bg-hover3);
+  --color-key-del-shadow: var(--color-key-del-shadow3);
+  --color-key-del-bg-hover: var(--color-key-del-bg-hover3);
+
+  --color-key-eq-bg: var(--color-key-eq-bg3); 
+  --color-key-eq-shadow: var(--color-key-eq-shadow3); 
+  
+  --color-key-num-bg: var(--color-key-num-bg3);
+  --color-key-num-shadow: var(--color-key-num-shadow3); 
+
+  --color-text-dark: var(--color-text-dark3);
+  --color-text-light: var(--color-text-light3);
+  --color-text-light-number: var( --color-text-light-number3);
+  --color-bg-pointer: var(--color-bg-pointer3);
+  --color-text-eq: var(--color-text-eq3); 
+}
