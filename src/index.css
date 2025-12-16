@@ -27,7 +27,7 @@
   --color-text-dark: oklch(33% 0.03 270); 
   --color-text-light: oklch(100% 0.0 0); 
   --color-text-light-number:  oklch(100% 0.0 0);
-  --color-bg-pointer:oklch(75% 0.183 55.934);
+  --color-bg-pointer:oklch(65.449% 0.22668 34.704);
   --color-text-eq: var(--color-text-light); 
 
 

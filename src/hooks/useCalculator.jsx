@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useOperations } from "./useOperations";
 export const useCalculator = () =>{
  
@@ -6,19 +6,26 @@ export const useCalculator = () =>{
     const Operators = ['+', '-', 'x', '/'];
 
 
-    const [number, setNumber] = useState('0');
+    const [number, setNumber] = useState(() => localStorage.getItem('number') ?? '0' );
     const [preValue, setPreValue] = useState(null);
     const [operator, setOperator] = useState(null);
 
 
     const { addition, subtraction, multiplication, division } = useOperations();
 
+    useEffect(()=>{
+        localStorage.setItem('number',number);
+    },[number]);
+
 
     const addNumber = (value) => {
+
         setNumber(prev => (prev === '0' ? value : prev + value));
         if(number.length > 10){
             setNumber('error...');
-        }
+        }else if(number === '4'){
+            setNumber('0')
+        }     
     };
 
     const chooseOperator = (op) => {

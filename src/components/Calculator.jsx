@@ -9,7 +9,6 @@ export const Calculator = () => {
 
    const {handleData,number} = useCalculator();
 
-   console.log(number)
 
     return (
         <section className="flex flex-col gap-3" >
