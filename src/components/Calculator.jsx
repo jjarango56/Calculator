@@ -13,13 +13,13 @@ export const Calculator = () => {
         <section className="flex flex-col gap-3 w-full items-center p-5" >
 
 
-            <div className="bg-keypad-bg text-text-light-number p-8  flex justify-end w-full max-w-[450px] rounded-xl font-bold text-3xl  sm:max-w-[380px] ">
+            <div className="bg-keypad-bg text-text-light-number p-8  flex justify-end w-full max-w-95 rounded-xl font-bold text-3xl  ">
                     <p>{number}</p>
             </div>
 
 
 
-            <div className="grid grid-cols-4  bg-keypad-bg gap-4 max-w-[450px] w-full  rounded-xl p-5  sm:max-w-[380px]">
+            <div className="grid grid-cols-4  bg-keypad-bg gap-4 max-w-30rem w-full  rounded-xl p-5  sm:max-w-95">
                 {Buttons.map((btn) => (
                     <button
                         key={btn}

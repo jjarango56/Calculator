@@ -4,7 +4,7 @@ export const Header = () => {
     const {  handleTheme } = use(ThemeContext);
 
     return (
-        <header className="flex w-full max-w-[350px] justify-between mb-5 text-text-dark items-center ">
+        <header className="flex w-full max-w-87 justify-between mb-5 text-text-dark items-center ">
             <h1 className="font-bold text-text-light-number text-xl">calc</h1>
             <div className="text-text-light-number">
                   
