@@ -46,7 +46,8 @@ export const Calculator = () => {
         ButtonsNumber.includes(btn)
           ? "bg-key-num-bg text-text-dark shadow-key-shadow-num text-2xl"
           : KeysRD.includes(btn)
-          ? `bg-key-del-bg text-text-light shadow-key-shadow-del text-xl uppercase hover:bg-key-del-bg-hover  ${
+          ? `bg-key-del-bg text-text-light shadow-key-shadow-del text-xl uppercase hover:bg-key-del-bg-hover  
+            ${
               btn === "RESET" ? "col-span-2" : ""
             }`
           : Equal.includes(btn)

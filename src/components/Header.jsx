@@ -1,7 +1,7 @@
-import { ThemeContext } from "../contexts/ThemeContext";
-import { use } from "react";
+import { useContext } from "../hooks/ThemeContext";
+
 export const Header = () => {
-  const { handleTheme } = use(ThemeContext);
+  const { handleTheme } = useContext();
 
   return (
     <header className="flex w-full max-w-87 justify-between mb-5 text-text-dark items-center ">
