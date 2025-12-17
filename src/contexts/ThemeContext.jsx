@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const ThemeContext = createContext('theme1');
+export const ThemeContext = createContext("theme1");
