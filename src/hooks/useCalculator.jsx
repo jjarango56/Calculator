@@ -18,16 +18,21 @@ export const useCalculator = () =>{
     },[number]);
 
 
-    const addNumber = (value) => {
 
-        setNumber(prev => (prev === '0' ? value : prev + value));
-        if(number.length > 10){
-            setNumber('error...');
-        }else if(number === '4'){
-            setNumber('0')
-        }     
-    };
+  const addNumber = (value) => {
+    setNumber(prev => {
+     
+        if (prev === '0') {
+            return value ;
+        }
 
+        if (value === '.' && prev.includes('.')) return prev;
+
+        if (prev.length >= 10) return setNumber('Error'); 
+
+        return prev + value;
+    });
+};
     const chooseOperator = (op) => {
         if (preValue != null) {
             calculate();
@@ -45,6 +50,12 @@ export const useCalculator = () =>{
     const calculate = () => {
         const currentValue = parseFloat(number);
         const previousValue = parseFloat(preValue);
+        if (isNaN(currentValue) || isNaN(previousValue)) {
+        setNumber('Error');
+        setPreValue(null);
+        setOperator(null);
+        return;
+    }
         let result;
         switch (operator) {
             case '+':
@@ -57,9 +68,11 @@ export const useCalculator = () =>{
                 result = multiplication(previousValue, currentValue);
                 break;
             case '/':
+                
                 result = division(previousValue, currentValue);
                 break;
             default:
+              
 
                 return;
 
